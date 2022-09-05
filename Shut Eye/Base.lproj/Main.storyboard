@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Shut_Eye" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" tag="1" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleAspectFit" axis="vertical" spacing="45" translatesAutoresizingMaskIntoConstraints="NO" id="gUx-pr-bg8">
+                                <rect key="frame" x="0.0" y="44" width="414" height="484"/>
+                                <subviews>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="mhY-ew-o7u">
+                                        <rect key="frame" x="0.0" y="0.0" width="414" height="180"/>
+                                        <color key="tintColor" systemColor="systemYellowColor"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="165" id="RAJ-Tt-c6w"/>
+                                            <constraint firstAttribute="height" constant="180" id="cqi-cr-o4v"/>
+                                        </constraints>
+                                    </imageView>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="I plan to fall asleep at..." textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6KB-Cq-xLz">
+                                        <rect key="frame" x="0.0" y="225" width="414" height="39"/>
+                                        <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="30"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillProportionally" spacing="19" translatesAutoresizingMaskIntoConstraints="NO" id="xdk-5o-T2o" userLabel="Time Stack View">
+                                        <rect key="frame" x="0.0" y="309" width="414" height="175"/>
+                                        <subviews>
+                                            <pickerView tag="1" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="F8k-a7-TKo">
+                                                <rect key="frame" x="0.0" y="0.0" width="132.5" height="175"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="175" id="zli-lK-Acu"/>
+                                                </constraints>
+                                            </pickerView>
+                                            <pickerView tag="2" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="lMI-fx-unC">
+                                                <rect key="frame" x="151.5" y="0.0" width="133" height="175"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="175" id="nB2-bH-L0s"/>
+                                                </constraints>
+                                            </pickerView>
+                                            <pickerView tag="3" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="gCg-bO-vXN">
+                                                <rect key="frame" x="303.5" y="0.0" width="110.5" height="175"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="175" id="r14-1T-tUu"/>
+                                                </constraints>
+                                            </pickerView>
+                                        </subviews>
+                                    </stackView>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="mhY-ew-o7u" firstAttribute="top" secondItem="gUx-pr-bg8" secondAttribute="top" id="9cM-07-4kz"/>
+                                    <constraint firstAttribute="bottom" secondItem="xdk-5o-T2o" secondAttribute="bottom" id="Fxx-Qs-WH2"/>
+                                </constraints>
+                            </stackView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uBn-Hw-eMp">
+                                <rect key="frame" x="131" y="714" width="152" height="53"/>
+                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Calculate" titleAlignment="center">
+                                    <fontDescription key="titleFontDescription" name="Futura-Medium" family="Futura" pointSize="30"/>
+                                </buttonConfiguration>
+                                <connections>
+                                    <action selector="calculatePressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="gF6-jQ-1RX"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="systemIndigoColor"/>
+                        <constraints>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="uBn-Hw-eMp" secondAttribute="bottom" constant="95" id="3OL-RA-sbP"/>
+                            <constraint firstAttribute="trailing" secondItem="gUx-pr-bg8" secondAttribute="trailing" id="PtX-1o-Ghg"/>
+                            <constraint firstItem="gUx-pr-bg8" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="ecJ-M4-ka0"/>
+                            <constraint firstItem="gUx-pr-bg8" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="nk3-kh-7L9"/>
+                            <constraint firstItem="uBn-Hw-eMp" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="w7V-l7-Yoi"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="calculateButton" destination="uBn-Hw-eMp" id="Y7F-nF-VJE"/>
+                        <outlet property="hourPicker" destination="F8k-a7-TKo" id="WrQ-aF-9pJ"/>
+                        <outlet property="logoView" destination="mhY-ew-o7u" id="o2P-hN-IsJ"/>
+                        <outlet property="minutePicker" destination="lMI-fx-unC" id="UpF-As-sUv"/>
+                        <outlet property="periodPicker" destination="gCg-bO-vXN" id="bNL-ln-k5U"/>
+                        <segue destination="aVk-Cm-LLY" kind="presentation" identifier="toResultsSegue" id="VwI-UI-DvY"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="137.68115942028987" y="101.78571428571428"/>
+        </scene>
+        <!--Results View Controller-->
+        <scene sceneID="4X9-Q7-cOR">
+            <objects>
+                <viewController id="aVk-Cm-LLY" customClass="ResultsViewController" customModule="Shut_Eye" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="jBc-Bc-i5R">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="a3a-sm-Zho"/>
+                        <color key="backgroundColor" systemColor="systemIndigoColor"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="8bB-0T-GxY" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="967" y="102"/>
+        </scene>
+    </scenes>
+    <resources>
+        <systemColor name="systemIndigoColor">
+            <color red="0.34509803921568627" green="0.33725490196078434" blue="0.83921568627450982" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemYellowColor">
+            <color red="1" green="0.80000000000000004" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
+</document>
