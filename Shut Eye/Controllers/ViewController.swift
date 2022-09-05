@@ -7,71 +7,45 @@
 
 import UIKit
 
-class ViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSource {
+class ViewController: UIViewController {
     
     let hourArray = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12]
     let minuteArray = [00, 05, 10, 15, 20, 25, 30, 35, 40, 45, 50, 55]
     let periodArray = ["AM", "PM"]
-    
-    func numberOfComponents(in pickerView: UIPickerView) -> Int {
-        return 1
-    }
-    
-    func pickerView(_ pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
-        
-        switch pickerView.tag {
-        case 1:
-            return 12
-        case 2:
-            return 12
-        default:
-            return 2
-        }
-    }
-    
-    func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
-        
-        switch pickerView.tag {
-        case 1:
-            return String(hourArray[row])
-        case 2:
-            return String(minuteArray[row])
-        default:
-            return periodArray[row]
-        }
-    }
-    
 
-    @IBOutlet weak var hourPicker: UIPickerView!
-    @IBOutlet weak var minutePicker: UIPickerView!
-    @IBOutlet weak var periodPicker: UIPickerView!
+    let formatter = DateFormatter()
+    var timeString: String?
     
     @IBOutlet weak var calculateButton: UIButton!
     @IBOutlet weak var logoView: UIImageView!
+    @IBOutlet weak var timePicker: UIDatePicker!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        calculateButton.sizeToFit()
-        
-        hourPicker.dataSource = self
-        hourPicker.delegate = self
-        
-        minutePicker.dataSource = self
-        minutePicker.delegate = self
-        
-        periodPicker.dataSource = self
-        periodPicker.delegate = self
+        formatter.dateFormat = "hh:mm a"
         
         logoView.image = UIImage(systemName: "moon.zzz")
+        timePicker.setValue(UIColor.white, forKey: "textColor")
+        timeString = formatter.string(from: timePicker.date)
     }
-
+    
+    @IBAction func timeChanged(_ sender: UIDatePicker) {
+        timeString = formatter.string(from: sender.date)
+    }
+    
     @IBAction func calculatePressed(_ sender: UIButton) {
+//        if let safeTime = timeString {
+//            print(safeTime)
+//        }
         performSegue(withIdentifier: "toResults", sender: self)
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        <#code#>
+        if (segue.identifier == "toResults") {
+            let destVC = segue.destination as! ResultsViewController
+            destVC.time = timeString ?? "00:00 am"
+        }
     }
 }
 
