@@ -51,7 +51,6 @@ class ViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSo
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
         
         calculateButton.sizeToFit()
         
@@ -68,7 +67,11 @@ class ViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSo
     }
 
     @IBAction func calculatePressed(_ sender: UIButton) {
-        performSegue(withIdentifier: "toResultsSegue", sender: self)
+        performSegue(withIdentifier: "toResults", sender: self)
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        <#code#>
     }
 }
 
