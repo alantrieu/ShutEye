@@ -1,0 +1,201 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Shut_Eye" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" tag="1" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleAspectFit" axis="vertical" spacing="45" translatesAutoresizingMaskIntoConstraints="NO" id="gUx-pr-bg8">
+                                <rect key="frame" x="0.0" y="44" width="414" height="525"/>
+                                <subviews>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="mhY-ew-o7u">
+                                        <rect key="frame" x="0.0" y="0.0" width="414" height="180"/>
+                                        <color key="tintColor" systemColor="systemYellowColor"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="165" id="RAJ-Tt-c6w"/>
+                                            <constraint firstAttribute="height" constant="180" id="cqi-cr-o4v"/>
+                                        </constraints>
+                                    </imageView>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="I plan to fall asleep at..." textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6KB-Cq-xLz">
+                                        <rect key="frame" x="0.0" y="225" width="414" height="39"/>
+                                        <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="30"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <datePicker contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="time" minuteInterval="5" style="wheels" translatesAutoresizingMaskIntoConstraints="NO" id="hRD-Uh-yXF">
+                                        <rect key="frame" x="0.0" y="309" width="414" height="216"/>
+                                        <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <locale key="locale" localeIdentifier="en_AU"/>
+                                        <connections>
+                                            <action selector="timeChanged:" destination="BYZ-38-t0r" eventType="valueChanged" id="dUF-Zv-tfi"/>
+                                        </connections>
+                                    </datePicker>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="hRD-Uh-yXF" firstAttribute="leading" secondItem="gUx-pr-bg8" secondAttribute="leading" id="1OS-Xj-naz"/>
+                                    <constraint firstItem="mhY-ew-o7u" firstAttribute="top" secondItem="gUx-pr-bg8" secondAttribute="top" id="9cM-07-4kz"/>
+                                    <constraint firstItem="hRD-Uh-yXF" firstAttribute="centerX" secondItem="gUx-pr-bg8" secondAttribute="centerX" id="Ndq-a0-st5"/>
+                                </constraints>
+                            </stackView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uBn-Hw-eMp">
+                                <rect key="frame" x="131" y="714" width="152" height="53"/>
+                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Calculate" titleAlignment="center">
+                                    <fontDescription key="titleFontDescription" name="Futura-Medium" family="Futura" pointSize="30"/>
+                                </buttonConfiguration>
+                                <connections>
+                                    <action selector="calculatePressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="gF6-jQ-1RX"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="systemIndigoColor"/>
+                        <constraints>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="uBn-Hw-eMp" secondAttribute="bottom" constant="95" id="3OL-RA-sbP"/>
+                            <constraint firstAttribute="trailing" secondItem="gUx-pr-bg8" secondAttribute="trailing" id="PtX-1o-Ghg"/>
+                            <constraint firstItem="gUx-pr-bg8" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="ecJ-M4-ka0"/>
+                            <constraint firstItem="gUx-pr-bg8" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="nk3-kh-7L9"/>
+                            <constraint firstItem="uBn-Hw-eMp" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="w7V-l7-Yoi"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="calculateButton" destination="uBn-Hw-eMp" id="Y7F-nF-VJE"/>
+                        <outlet property="logoView" destination="mhY-ew-o7u" id="o2P-hN-IsJ"/>
+                        <outlet property="timePicker" destination="hRD-Uh-yXF" id="J31-eT-doS"/>
+                        <segue destination="xp8-Ne-Dtk" kind="presentation" identifier="toResults" id="6j8-ZI-jun"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="144.92753623188406" y="101.78571428571428"/>
+        </scene>
+        <!--Results View Controller-->
+        <scene sceneID="Zav-2H-XKU">
+            <objects>
+                <viewController id="xp8-Ne-Dtk" customClass="ResultsViewController" customModule="Shut_Eye" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="00d-4e-07J">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oBM-3d-gah">
+                                <rect key="frame" x="0.0" y="694" width="414" height="53"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="53" id="EbV-EW-VTm"/>
+                                </constraints>
+                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Recalculate" titleAlignment="center">
+                                    <fontDescription key="titleFontDescription" name="Futura-Medium" family="Futura" pointSize="30"/>
+                                </buttonConfiguration>
+                                <connections>
+                                    <action selector="calculatePressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="pbe-k6-fbe"/>
+                                    <action selector="recalculatePressed:" destination="xp8-Ne-Dtk" eventType="touchUpInside" id="rds-k6-ogQ"/>
+                                </connections>
+                            </button>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="equalSpacing" alignment="center" spacing="30" translatesAutoresizingMaskIntoConstraints="NO" id="T3Z-Xj-rne">
+                                <rect key="frame" x="0.0" y="44" width="414" height="488"/>
+                                <subviews>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="dkT-vK-cfD">
+                                        <rect key="frame" x="93.5" y="0.0" width="227" height="155"/>
+                                        <color key="tintColor" red="1" green="0.80165452250000002" blue="0.47414874759999998" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="227" id="Azd-L4-Ikt"/>
+                                            <constraint firstAttribute="height" constant="155" id="WUw-03-V9l"/>
+                                            <constraint firstAttribute="width" constant="227" id="gBY-98-68l"/>
+                                        </constraints>
+                                    </imageView>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="For a good night's sleep, try to wake up at..." textAlignment="center" lineBreakMode="wordWrap" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uHm-Qa-y6I">
+                                        <rect key="frame" x="15" y="185" width="384" height="78"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="78" id="zsx-Lg-fQ3"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="30"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="BCC-oY-Rum">
+                                        <rect key="frame" x="0.0" y="293" width="414" height="87"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="00:00 AM" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="c4j-CG-s0O">
+                                                <rect key="frame" x="112.5" y="20" width="189" height="47"/>
+                                                <fontDescription key="fontDescription" name="Futura-Bold" family="Futura" pointSize="36"/>
+                                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Jtz-SP-RFC">
+                                                <rect key="frame" x="336" y="13" width="46.5" height="61"/>
+                                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <state key="normal" title="Button"/>
+                                                <buttonConfiguration key="configuration" style="tinted" title="+">
+                                                    <fontDescription key="titleFontDescription" name="Futura-Medium" family="Futura" pointSize="36"/>
+                                                </buttonConfiguration>
+                                            </button>
+                                        </subviews>
+                                        <constraints>
+                                            <constraint firstItem="c4j-CG-s0O" firstAttribute="baseline" secondItem="Jtz-SP-RFC" secondAttribute="baseline" id="5wW-cs-i2W"/>
+                                            <constraint firstAttribute="trailing" secondItem="Jtz-SP-RFC" secondAttribute="trailing" constant="31.5" id="GAc-wN-tAx"/>
+                                            <constraint firstItem="c4j-CG-s0O" firstAttribute="centerY" secondItem="BCC-oY-Rum" secondAttribute="centerY" id="a5K-MN-jrf"/>
+                                            <constraint firstItem="Jtz-SP-RFC" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="c4j-CG-s0O" secondAttribute="trailing" constant="8" symbolic="YES" id="mib-S3-Q1j"/>
+                                            <constraint firstItem="c4j-CG-s0O" firstAttribute="top" secondItem="BCC-oY-Rum" secondAttribute="top" constant="20" id="ofr-jl-7GQ"/>
+                                            <constraint firstItem="c4j-CG-s0O" firstAttribute="centerX" secondItem="BCC-oY-Rum" secondAttribute="centerX" id="rHs-Gt-eTh"/>
+                                        </constraints>
+                                    </view>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="X hours of sleep, or Y complete cycles." textAlignment="center" lineBreakMode="wordWrap" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="seh-qs-bpP">
+                                        <rect key="frame" x="55.5" y="410" width="303" height="78"/>
+                                        <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="30"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="trailing" secondItem="uHm-Qa-y6I" secondAttribute="trailing" constant="15" id="Fr8-CC-ApW"/>
+                                    <constraint firstAttribute="trailing" secondItem="BCC-oY-Rum" secondAttribute="trailing" id="SmO-aE-irS"/>
+                                    <constraint firstItem="uHm-Qa-y6I" firstAttribute="leading" secondItem="T3Z-Xj-rne" secondAttribute="leading" constant="15" id="Xfp-Y8-z0R"/>
+                                    <constraint firstItem="BCC-oY-Rum" firstAttribute="leading" secondItem="T3Z-Xj-rne" secondAttribute="leading" id="dUm-gZ-rpY"/>
+                                </constraints>
+                            </stackView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="2cd-XM-TvP"/>
+                        <color key="backgroundColor" systemColor="systemIndigoColor"/>
+                        <constraints>
+                            <constraint firstItem="2cd-XM-TvP" firstAttribute="trailing" secondItem="oBM-3d-gah" secondAttribute="trailing" id="0qk-eP-hsY"/>
+                            <constraint firstItem="T3Z-Xj-rne" firstAttribute="leading" secondItem="2cd-XM-TvP" secondAttribute="leading" id="Rx8-7w-yfS"/>
+                            <constraint firstItem="2cd-XM-TvP" firstAttribute="trailing" secondItem="T3Z-Xj-rne" secondAttribute="trailing" id="ScA-6d-4Gh"/>
+                            <constraint firstItem="T3Z-Xj-rne" firstAttribute="top" secondItem="2cd-XM-TvP" secondAttribute="top" id="cUZ-5F-84k"/>
+                            <constraint firstItem="2cd-XM-TvP" firstAttribute="bottom" secondItem="oBM-3d-gah" secondAttribute="bottom" constant="95" id="j20-96-QN8"/>
+                            <constraint firstItem="oBM-3d-gah" firstAttribute="leading" secondItem="2cd-XM-TvP" secondAttribute="leading" id="uj4-MC-qpT"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="descriptionText" destination="seh-qs-bpP" id="rg4-Ch-XY6"/>
+                        <outlet property="incrementButton" destination="Jtz-SP-RFC" id="5nf-Iu-6r2"/>
+                        <outlet property="timeLabel" destination="c4j-CG-s0O" id="ZSj-Dh-AIJ"/>
+                        <outlet property="wakeImageView" destination="dkT-vK-cfD" id="SzP-uY-w3z"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="WH6-GB-fXP" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="934.78260869565224" y="101.78571428571428"/>
+        </scene>
+    </scenes>
+    <resources>
+        <systemColor name="systemIndigoColor">
+            <color red="0.34509803921568627" green="0.33725490196078434" blue="0.83921568627450982" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemYellowColor">
+            <color red="1" green="0.80000000000000004" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
+</document>
