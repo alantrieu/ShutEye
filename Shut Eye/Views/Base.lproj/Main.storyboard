@@ -105,7 +105,7 @@
                                 </connections>
                             </button>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="equalSpacing" alignment="center" spacing="30" translatesAutoresizingMaskIntoConstraints="NO" id="T3Z-Xj-rne">
-                                <rect key="frame" x="0.0" y="44" width="414" height="488"/>
+                                <rect key="frame" x="0.0" y="64" width="414" height="488"/>
                                 <subviews>
                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="dkT-vK-cfD">
                                         <rect key="frame" x="93.5" y="0.0" width="227" height="155"/>
@@ -135,18 +135,37 @@
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Jtz-SP-RFC">
-                                                <rect key="frame" x="336" y="13" width="46.5" height="61"/>
+                                                <rect key="frame" x="335" y="13" width="47.5" height="61"/>
                                                 <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <state key="normal" title="Button"/>
                                                 <buttonConfiguration key="configuration" style="tinted" title="+">
                                                     <fontDescription key="titleFontDescription" name="Futura-Medium" family="Futura" pointSize="36"/>
                                                 </buttonConfiguration>
+                                                <connections>
+                                                    <action selector="incrementButtonPressed:" destination="xp8-Ne-Dtk" eventType="touchUpInside" id="N77-pD-BPd"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bmN-c5-pZa">
+                                                <rect key="frame" x="31.5" y="13" width="47.5" height="61"/>
+                                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <state key="normal" title="Button"/>
+                                                <buttonConfiguration key="configuration" style="tinted" title="−" titleAlignment="center">
+                                                    <fontDescription key="titleFontDescription" name="Futura-Medium" family="Futura" pointSize="36"/>
+                                                </buttonConfiguration>
+                                                <connections>
+                                                    <action selector="decrementButtonPressed:" destination="xp8-Ne-Dtk" eventType="touchUpInside" id="cmf-oK-8ti"/>
+                                                </connections>
                                             </button>
                                         </subviews>
                                         <constraints>
                                             <constraint firstItem="c4j-CG-s0O" firstAttribute="baseline" secondItem="Jtz-SP-RFC" secondAttribute="baseline" id="5wW-cs-i2W"/>
+                                            <constraint firstItem="bmN-c5-pZa" firstAttribute="centerY" secondItem="BCC-oY-Rum" secondAttribute="centerY" id="DyZ-gu-9fS"/>
                                             <constraint firstAttribute="trailing" secondItem="Jtz-SP-RFC" secondAttribute="trailing" constant="31.5" id="GAc-wN-tAx"/>
+                                            <constraint firstItem="bmN-c5-pZa" firstAttribute="leading" secondItem="BCC-oY-Rum" secondAttribute="leading" constant="31.5" id="IXq-zv-a54"/>
+                                            <constraint firstAttribute="trailing" secondItem="Jtz-SP-RFC" secondAttribute="trailing" constant="31.5" id="ZUV-uh-luV"/>
                                             <constraint firstItem="c4j-CG-s0O" firstAttribute="centerY" secondItem="BCC-oY-Rum" secondAttribute="centerY" id="a5K-MN-jrf"/>
+                                            <constraint firstItem="c4j-CG-s0O" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="bmN-c5-pZa" secondAttribute="trailing" constant="8" symbolic="YES" id="gzP-Qr-zB9"/>
+                                            <constraint firstItem="Jtz-SP-RFC" firstAttribute="leading" secondItem="c4j-CG-s0O" secondAttribute="trailing" constant="33.5" id="i7a-Az-4VK"/>
                                             <constraint firstItem="Jtz-SP-RFC" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="c4j-CG-s0O" secondAttribute="trailing" constant="8" symbolic="YES" id="mib-S3-Q1j"/>
                                             <constraint firstItem="c4j-CG-s0O" firstAttribute="top" secondItem="BCC-oY-Rum" secondAttribute="top" constant="20" id="ofr-jl-7GQ"/>
                                             <constraint firstItem="c4j-CG-s0O" firstAttribute="centerX" secondItem="BCC-oY-Rum" secondAttribute="centerX" id="rHs-Gt-eTh"/>
@@ -160,10 +179,14 @@
                                     </label>
                                 </subviews>
                                 <constraints>
+                                    <constraint firstItem="BCC-oY-Rum" firstAttribute="leading" secondItem="T3Z-Xj-rne" secondAttribute="leading" id="3no-hb-We9"/>
                                     <constraint firstAttribute="trailing" secondItem="uHm-Qa-y6I" secondAttribute="trailing" constant="15" id="Fr8-CC-ApW"/>
                                     <constraint firstAttribute="trailing" secondItem="BCC-oY-Rum" secondAttribute="trailing" id="SmO-aE-irS"/>
+                                    <constraint firstAttribute="trailing" secondItem="BCC-oY-Rum" secondAttribute="trailing" id="Tm3-Sr-OEf"/>
                                     <constraint firstItem="uHm-Qa-y6I" firstAttribute="leading" secondItem="T3Z-Xj-rne" secondAttribute="leading" constant="15" id="Xfp-Y8-z0R"/>
                                     <constraint firstItem="BCC-oY-Rum" firstAttribute="leading" secondItem="T3Z-Xj-rne" secondAttribute="leading" id="dUm-gZ-rpY"/>
+                                    <constraint firstItem="seh-qs-bpP" firstAttribute="top" secondItem="BCC-oY-Rum" secondAttribute="bottom" constant="30" id="hqJ-5d-gKt"/>
+                                    <constraint firstItem="BCC-oY-Rum" firstAttribute="top" secondItem="uHm-Qa-y6I" secondAttribute="bottom" constant="30" id="k5Q-GV-JHc"/>
                                 </constraints>
                             </stackView>
                         </subviews>
@@ -173,12 +196,13 @@
                             <constraint firstItem="2cd-XM-TvP" firstAttribute="trailing" secondItem="oBM-3d-gah" secondAttribute="trailing" id="0qk-eP-hsY"/>
                             <constraint firstItem="T3Z-Xj-rne" firstAttribute="leading" secondItem="2cd-XM-TvP" secondAttribute="leading" id="Rx8-7w-yfS"/>
                             <constraint firstItem="2cd-XM-TvP" firstAttribute="trailing" secondItem="T3Z-Xj-rne" secondAttribute="trailing" id="ScA-6d-4Gh"/>
-                            <constraint firstItem="T3Z-Xj-rne" firstAttribute="top" secondItem="2cd-XM-TvP" secondAttribute="top" id="cUZ-5F-84k"/>
+                            <constraint firstItem="T3Z-Xj-rne" firstAttribute="top" secondItem="2cd-XM-TvP" secondAttribute="top" constant="20" id="cUZ-5F-84k"/>
                             <constraint firstItem="2cd-XM-TvP" firstAttribute="bottom" secondItem="oBM-3d-gah" secondAttribute="bottom" constant="95" id="j20-96-QN8"/>
                             <constraint firstItem="oBM-3d-gah" firstAttribute="leading" secondItem="2cd-XM-TvP" secondAttribute="leading" id="uj4-MC-qpT"/>
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="decrementButton" destination="bmN-c5-pZa" id="Cgw-hZ-61R"/>
                         <outlet property="descriptionText" destination="seh-qs-bpP" id="rg4-Ch-XY6"/>
                         <outlet property="incrementButton" destination="Jtz-SP-RFC" id="5nf-Iu-6r2"/>
                         <outlet property="timeLabel" destination="c4j-CG-s0O" id="ZSj-Dh-AIJ"/>
