@@ -7,7 +7,7 @@
 
 import UIKit
 
-class ViewController: UIViewController {
+class SleepController: UIViewController {
     
     let hourArray = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12]
     let minuteArray = [00, 05, 10, 15, 20, 25, 30, 35, 40, 45, 50, 55]
@@ -41,9 +41,10 @@ class ViewController: UIViewController {
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if (segue.identifier == "toResults") {
             let cycleCalc = CycleCalculator()
+            let cycleData = CycleData(cycleTimes: cycleCalc.calculateCycles(time: timePicker.date, with: formatter))
             
             let destVC = segue.destination as! ResultsViewController
-            destVC.time = cycleCalc.calculateCycles(time: timePicker.date, with: formatter)
+            destVC.cycleData = cycleData
         }
     }
 }

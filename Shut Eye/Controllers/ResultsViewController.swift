@@ -9,8 +9,8 @@ import UIKit
 
 class ResultsViewController: UIViewController {
     
-    var time: [Int: String]?
-    var currentCycle = 3
+    var cycleData: CycleData?
+    var currentCycle = CycleData.getDefaultCycle()
 
     @IBOutlet weak var wakeImageView: UIImageView!
     @IBOutlet weak var timeLabel: UILabel!
@@ -18,38 +18,27 @@ class ResultsViewController: UIViewController {
     @IBOutlet weak var decrementButton: UIButton!
     @IBOutlet weak var descriptionText: UILabel!
     
+    func updateUI() {
+        timeLabel.text = cycleData?.getTime(cycle: currentCycle)
+        descriptionText.text = "\(cycleData!.getHours(cycle: currentCycle)) hours of sleep, or \(currentCycle) complete cycles"
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
         wakeImageView.image = UIImage(systemName: "sun.and.horizon")
-        timeLabel.text = time?[currentCycle]
-        descriptionText.text = "\(Double(90 * currentCycle) / Double(60)) hours of sleep, or \(currentCycle) complete cycles"
+        updateUI()
     }
 
     @IBAction func incrementButtonPressed(_ sender: UIButton) {
-        // move to next cycle
-        if (currentCycle == 6) {
-            currentCycle = 3
-        } else {
-            currentCycle += 1
-        }
-        
-        timeLabel.text = time?[currentCycle]
-        descriptionText.text = "\(Double(90 * currentCycle) / Double(60)) hours of sleep, or \(currentCycle) complete cycles"
+        currentCycle = cycleData!.incrementCurrentCycle()
+        updateUI()
     }
     
     @IBAction func decrementButtonPressed(_ sender: UIButton) {
-        // move to previous cycle
-        if (currentCycle == 3) {
-            currentCycle = 6
-        } else {
-            currentCycle -= 1
-        }
-        
-        timeLabel.text = time?[currentCycle]
-        descriptionText.text = "\(Double(90 * currentCycle) / Double(60)) hours of sleep, or \(currentCycle) complete cycles"
+        currentCycle = cycleData!.decrementCurrentCycle()
+        updateUI()
     }
-    
     
     @IBAction func recalculatePressed(_ sender: UIButton) {
         self.dismiss(animated: true)

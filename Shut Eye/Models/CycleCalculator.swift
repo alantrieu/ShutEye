@@ -7,7 +7,6 @@
 
 import Foundation
 
-// Manages and keeps track of sleep cycles
 struct CycleCalculator {
     
     // given a certain time, computes the wake up times for 3, 4, 5 and 6 cycles of sleep as an array of Strings
