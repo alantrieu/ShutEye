@@ -14,6 +14,7 @@
 		C211BE1B28BA598F00EB92E6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C211BE1A28BA598F00EB92E6 /* Assets.xcassets */; };
 		C211BE1E28BA598F00EB92E6 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C211BE1C28BA598F00EB92E6 /* LaunchScreen.storyboard */; };
 		C256F29E28C5F7EC009B1FB7 /* ResultsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C256F29D28C5F7EC009B1FB7 /* ResultsViewController.swift */; };
+		C256F2A028C7300B009B1FB7 /* CycleCalculator.swift in Sources */ = {isa = PBXBuildFile; fileRef = C256F29F28C7300B009B1FB7 /* CycleCalculator.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -27,6 +28,7 @@
 		C211BE1F28BA598F00EB92E6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		C256F29B28C5D368009B1FB7 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		C256F29D28C5F7EC009B1FB7 /* ResultsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultsViewController.swift; sourceTree = "<group>"; };
+		C256F29F28C7300B009B1FB7 /* CycleCalculator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CycleCalculator.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -61,9 +63,10 @@
 			children = (
 				C211BE1128BA598E00EB92E6 /* AppDelegate.swift */,
 				C211BE1328BA598E00EB92E6 /* SceneDelegate.swift */,
+				C256F2A128C751E6009B1FB7 /* Models */,
+				C256F2A228C751EF009B1FB7 /* Views */,
 				C256F29C28C5F7DB009B1FB7 /* Controllers */,
 				C256F29B28C5D368009B1FB7 /* README.md */,
-				C211BE1728BA598E00EB92E6 /* Main.storyboard */,
 				C211BE1A28BA598F00EB92E6 /* Assets.xcassets */,
 				C211BE1C28BA598F00EB92E6 /* LaunchScreen.storyboard */,
 				C211BE1F28BA598F00EB92E6 /* Info.plist */,
@@ -78,6 +81,22 @@
 				C256F29D28C5F7EC009B1FB7 /* ResultsViewController.swift */,
 			);
 			path = Controllers;
+			sourceTree = "<group>";
+		};
+		C256F2A128C751E6009B1FB7 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				C256F29F28C7300B009B1FB7 /* CycleCalculator.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		C256F2A228C751EF009B1FB7 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				C211BE1728BA598E00EB92E6 /* Main.storyboard */,
+			);
+			path = Views;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -155,6 +174,7 @@
 				C211BE1228BA598E00EB92E6 /* AppDelegate.swift in Sources */,
 				C211BE1428BA598E00EB92E6 /* SceneDelegate.swift in Sources */,
 				C256F29E28C5F7EC009B1FB7 /* ResultsViewController.swift in Sources */,
+				C256F2A028C7300B009B1FB7 /* CycleCalculator.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -35,16 +35,15 @@ class ViewController: UIViewController {
     }
     
     @IBAction func calculatePressed(_ sender: UIButton) {
-//        if let safeTime = timeString {
-//            print(safeTime)
-//        }
         performSegue(withIdentifier: "toResults", sender: self)
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if (segue.identifier == "toResults") {
+            let cycleCalc = CycleCalculator()
+            
             let destVC = segue.destination as! ResultsViewController
-            destVC.time = timeString ?? "00:00 am"
+            destVC.time = cycleCalc.calculateCycles(time: timePicker.date, with: formatter)
         }
     }
 }
