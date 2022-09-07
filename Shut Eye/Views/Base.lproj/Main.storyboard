@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="WNv-KY-kHO">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
@@ -8,6 +8,80 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
+        <!--Home Controller-->
+        <scene sceneID="U9T-U3-bti">
+            <objects>
+                <viewController id="EFC-u6-WVL" customClass="HomeController" customModule="Shut_Eye" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Mog-Xm-TfA">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillProportionally" translatesAutoresizingMaskIntoConstraints="NO" id="MIo-EW-MRY">
+                                <rect key="frame" x="82" y="409" width="250" height="78"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="1" verticalHuggingPriority="251" horizontalCompressionResistancePriority="1" text="Shut Eye" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Acn-Gc-SMP">
+                                        <rect key="frame" x="0.0" y="0.0" width="165" height="78"/>
+                                        <fontDescription key="fontDescription" name="Futura-Bold" family="Futura" pointSize="36"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="6Py-Vg-ilZ">
+                                        <rect key="frame" x="165" y="0.0" width="85" height="78"/>
+                                    </imageView>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="bottom" secondItem="6Py-Vg-ilZ" secondAttribute="bottom" id="Sja-xx-h6q"/>
+                                    <constraint firstItem="6Py-Vg-ilZ" firstAttribute="top" secondItem="MIo-EW-MRY" secondAttribute="top" id="Xo4-on-6hL"/>
+                                    <constraint firstAttribute="trailing" secondItem="6Py-Vg-ilZ" secondAttribute="trailing" id="rgB-zO-2Xb"/>
+                                </constraints>
+                            </stackView>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="29" translatesAutoresizingMaskIntoConstraints="NO" id="K3R-ML-bpM">
+                                <rect key="frame" x="0.0" y="676" width="414" height="151"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6a8-0R-Jc0">
+                                        <rect key="frame" x="0.0" y="0.0" width="414" height="61"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="tinted" title="Sleep Calculator">
+                                            <fontDescription key="titleFontDescription" name="Futura-Medium" family="Futura" pointSize="36"/>
+                                        </buttonConfiguration>
+                                        <connections>
+                                            <segue destination="BYZ-38-t0r" kind="show" id="pGj-hi-ONr"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5Jg-du-rXt">
+                                        <rect key="frame" x="0.0" y="90" width="414" height="61"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="tinted" title="Wake Calculator">
+                                            <fontDescription key="titleFontDescription" name="Futura-Medium" family="Futura" pointSize="36"/>
+                                        </buttonConfiguration>
+                                        <connections>
+                                            <segue destination="P7R-aX-iFj" kind="show" id="zUG-S9-Lrt"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="EHh-Uf-EbO"/>
+                        <color key="backgroundColor" systemColor="systemIndigoColor"/>
+                        <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="EHh-Uf-EbO" firstAttribute="bottom" secondItem="K3R-ML-bpM" secondAttribute="bottom" constant="35" id="Pc2-GM-4CK"/>
+                            <constraint firstItem="MIo-EW-MRY" firstAttribute="centerY" secondItem="Mog-Xm-TfA" secondAttribute="centerY" id="YyX-xu-7GA"/>
+                            <constraint firstItem="K3R-ML-bpM" firstAttribute="leading" secondItem="EHh-Uf-EbO" secondAttribute="leading" id="cp7-DZ-Az1"/>
+                            <constraint firstItem="MIo-EW-MRY" firstAttribute="centerX" secondItem="Mog-Xm-TfA" secondAttribute="centerX" id="eqJ-RW-Iir"/>
+                            <constraint firstItem="EHh-Uf-EbO" firstAttribute="trailing" secondItem="K3R-ML-bpM" secondAttribute="trailing" id="sRi-u3-cer"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="T1I-As-ViY"/>
+                    <connections>
+                        <outlet property="appLogo" destination="6Py-Vg-ilZ" id="Bn4-ck-YSz"/>
+                        <outlet property="appName" destination="Acn-Gc-SMP" id="mpt-Mr-yzt"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="KL8-Zy-vaR" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="971.01449275362324" y="417.85714285714283"/>
+        </scene>
         <!--Sleep Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
@@ -17,7 +91,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleAspectFit" axis="vertical" spacing="45" translatesAutoresizingMaskIntoConstraints="NO" id="gUx-pr-bg8">
-                                <rect key="frame" x="0.0" y="44" width="414" height="525"/>
+                                <rect key="frame" x="0.0" y="88" width="414" height="525"/>
                                 <subviews>
                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="mhY-ew-o7u">
                                         <rect key="frame" x="0.0" y="0.0" width="414" height="180"/>
@@ -70,6 +144,7 @@
                             <constraint firstItem="uBn-Hw-eMp" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="w7V-l7-Yoi"/>
                         </constraints>
                     </view>
+                    <navigationItem key="navigationItem" id="EgH-ck-QJq"/>
                     <connections>
                         <outlet property="calculateButton" destination="uBn-Hw-eMp" id="Y7F-nF-VJE"/>
                         <outlet property="logoView" destination="mhY-ew-o7u" id="o2P-hN-IsJ"/>
@@ -79,7 +154,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="144.92753623188406" y="101.78571428571428"/>
+            <point key="canvasLocation" x="1963.7681159420292" y="111.83035714285714"/>
         </scene>
         <!--Results View Controller-->
         <scene sceneID="Zav-2H-XKU">
@@ -116,7 +191,7 @@
                                             <constraint firstAttribute="width" constant="227" id="gBY-98-68l"/>
                                         </constraints>
                                     </imageView>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="For a good night's sleep, try to wake up at..." textAlignment="center" lineBreakMode="wordWrap" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uHm-Qa-y6I">
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="For a good night's sleep, try to X at..." textAlignment="center" lineBreakMode="wordWrap" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uHm-Qa-y6I">
                                         <rect key="frame" x="15" y="185" width="384" height="78"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="78" id="zsx-Lg-fQ3"/>
@@ -206,14 +281,110 @@
                         <outlet property="descriptionText" destination="seh-qs-bpP" id="rg4-Ch-XY6"/>
                         <outlet property="incrementButton" destination="Jtz-SP-RFC" id="5nf-Iu-6r2"/>
                         <outlet property="timeLabel" destination="c4j-CG-s0O" id="ZSj-Dh-AIJ"/>
+                        <outlet property="titleLabel" destination="uHm-Qa-y6I" id="wG0-Tj-dTf"/>
                         <outlet property="wakeImageView" destination="dkT-vK-cfD" id="SzP-uY-w3z"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="WH6-GB-fXP" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="934.78260869565224" y="101.78571428571428"/>
+            <point key="canvasLocation" x="3049.275362318841" y="417.85714285714283"/>
+        </scene>
+        <!--Wake Controller-->
+        <scene sceneID="cHs-0G-rRp">
+            <objects>
+                <viewController id="P7R-aX-iFj" customClass="WakeController" customModule="Shut_Eye" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" tag="1" contentMode="scaleToFill" id="TXn-pZ-1h6">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleAspectFit" axis="vertical" spacing="45" translatesAutoresizingMaskIntoConstraints="NO" id="gPi-JX-8Xq">
+                                <rect key="frame" x="0.0" y="88" width="414" height="525"/>
+                                <subviews>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="SJx-uO-fxF">
+                                        <rect key="frame" x="0.0" y="0.0" width="414" height="180"/>
+                                        <color key="tintColor" systemColor="systemYellowColor"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="165" id="8hv-8y-rex"/>
+                                            <constraint firstAttribute="height" constant="180" id="wfZ-HE-IUN"/>
+                                        </constraints>
+                                    </imageView>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="I plan to wake up at..." textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Jke-zR-qeN">
+                                        <rect key="frame" x="0.0" y="225" width="414" height="39"/>
+                                        <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="30"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <datePicker contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="time" minuteInterval="5" style="wheels" translatesAutoresizingMaskIntoConstraints="NO" id="kml-FZ-MTB">
+                                        <rect key="frame" x="0.0" y="309" width="414" height="216"/>
+                                        <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <locale key="locale" localeIdentifier="en_AU"/>
+                                        <connections>
+                                            <action selector="timeChanged:" destination="P7R-aX-iFj" eventType="valueChanged" id="H1I-n1-CYM"/>
+                                        </connections>
+                                    </datePicker>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="kml-FZ-MTB" firstAttribute="leading" secondItem="gPi-JX-8Xq" secondAttribute="leading" id="VDV-P4-QqM"/>
+                                    <constraint firstItem="SJx-uO-fxF" firstAttribute="top" secondItem="gPi-JX-8Xq" secondAttribute="top" id="eBc-9a-o0C"/>
+                                    <constraint firstItem="kml-FZ-MTB" firstAttribute="centerX" secondItem="gPi-JX-8Xq" secondAttribute="centerX" id="hdj-a4-eZE"/>
+                                </constraints>
+                            </stackView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VeV-Yl-f2C">
+                                <rect key="frame" x="131" y="714" width="152" height="53"/>
+                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Calculate" titleAlignment="center">
+                                    <fontDescription key="titleFontDescription" name="Futura-Medium" family="Futura" pointSize="30"/>
+                                </buttonConfiguration>
+                                <connections>
+                                    <action selector="calculatePressed:" destination="P7R-aX-iFj" eventType="touchUpInside" id="eBc-Zs-lL6"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="ONf-G8-JvD"/>
+                        <color key="backgroundColor" systemColor="systemIndigoColor"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="gPi-JX-8Xq" secondAttribute="trailing" id="93M-YT-kQH"/>
+                            <constraint firstItem="VeV-Yl-f2C" firstAttribute="centerX" secondItem="TXn-pZ-1h6" secondAttribute="centerX" id="WjH-B8-CpP"/>
+                            <constraint firstItem="ONf-G8-JvD" firstAttribute="bottom" secondItem="VeV-Yl-f2C" secondAttribute="bottom" constant="95" id="XqO-6k-4ch"/>
+                            <constraint firstItem="gPi-JX-8Xq" firstAttribute="leading" secondItem="ONf-G8-JvD" secondAttribute="leading" id="pIK-XH-Nbe"/>
+                            <constraint firstItem="gPi-JX-8Xq" firstAttribute="top" secondItem="ONf-G8-JvD" secondAttribute="top" id="vP0-Ra-1Ds"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="FnF-Pi-yV7"/>
+                    <connections>
+                        <outlet property="logoView" destination="SJx-uO-fxF" id="MIX-Kp-f5i"/>
+                        <outlet property="timePicker" destination="kml-FZ-MTB" id="Sie-TQ-ccz"/>
+                        <segue destination="xp8-Ne-Dtk" kind="presentation" identifier="toResults" id="GJO-jH-Lws"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="L1V-Vx-4WZ" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1965.217391304348" y="778.79464285714278"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="goc-oo-ZUO">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="WNv-KY-kHO" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="5Cm-bJ-vWX">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="EFC-u6-WVL" kind="relationship" relationship="rootViewController" id="fic-al-OhF"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ia0-hr-0N0" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="60.869565217391312" y="417.85714285714283"/>
         </scene>
     </scenes>
+    <inferredMetricsTieBreakers>
+        <segue reference="GJO-jH-Lws"/>
+    </inferredMetricsTieBreakers>
+    <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
     <resources>
         <systemColor name="systemIndigoColor">
             <color red="0.34509803921568627" green="0.33725490196078434" blue="0.83921568627450982" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>

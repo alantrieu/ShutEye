@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		C20F2E8D28C897DD002697DC /* HomeController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C20F2E8C28C897DD002697DC /* HomeController.swift */; };
 		C211BE1228BA598E00EB92E6 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C211BE1128BA598E00EB92E6 /* AppDelegate.swift */; };
 		C211BE1428BA598E00EB92E6 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C211BE1328BA598E00EB92E6 /* SceneDelegate.swift */; };
 		C211BE1628BA598E00EB92E6 /* SleepController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C211BE1528BA598E00EB92E6 /* SleepController.swift */; };
@@ -17,9 +18,11 @@
 		C256F2A028C7300B009B1FB7 /* CycleCalculator.swift in Sources */ = {isa = PBXBuildFile; fileRef = C256F29F28C7300B009B1FB7 /* CycleCalculator.swift */; };
 		C256F2A428C7874D009B1FB7 /* CycleData.swift in Sources */ = {isa = PBXBuildFile; fileRef = C256F2A328C7874D009B1FB7 /* CycleData.swift */; };
 		C2852E9128C870CC00A2C25C /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2852E9028C870CC00A2C25C /* Constants.swift */; };
+		C2852E9328C8860400A2C25C /* WakeController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2852E9228C8860400A2C25C /* WakeController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		C20F2E8C28C897DD002697DC /* HomeController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeController.swift; sourceTree = "<group>"; };
 		C211BE0E28BA598E00EB92E6 /* Shut Eye.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Shut Eye.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		C211BE1128BA598E00EB92E6 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		C211BE1328BA598E00EB92E6 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -33,6 +36,7 @@
 		C256F29F28C7300B009B1FB7 /* CycleCalculator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CycleCalculator.swift; sourceTree = "<group>"; };
 		C256F2A328C7874D009B1FB7 /* CycleData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CycleData.swift; sourceTree = "<group>"; };
 		C2852E9028C870CC00A2C25C /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		C2852E9228C8860400A2C25C /* WakeController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WakeController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -83,6 +87,8 @@
 			children = (
 				C211BE1528BA598E00EB92E6 /* SleepController.swift */,
 				C256F29D28C5F7EC009B1FB7 /* ResultsViewController.swift */,
+				C2852E9228C8860400A2C25C /* WakeController.swift */,
+				C20F2E8C28C897DD002697DC /* HomeController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -179,7 +185,9 @@
 				C2852E9128C870CC00A2C25C /* Constants.swift in Sources */,
 				C211BE1628BA598E00EB92E6 /* SleepController.swift in Sources */,
 				C211BE1228BA598E00EB92E6 /* AppDelegate.swift in Sources */,
+				C2852E9328C8860400A2C25C /* WakeController.swift in Sources */,
 				C256F2A428C7874D009B1FB7 /* CycleData.swift in Sources */,
+				C20F2E8D28C897DD002697DC /* HomeController.swift in Sources */,
 				C211BE1428BA598E00EB92E6 /* SceneDelegate.swift in Sources */,
 				C256F29E28C5F7EC009B1FB7 /* ResultsViewController.swift in Sources */,
 				C256F2A028C7300B009B1FB7 /* CycleCalculator.swift in Sources */,
