@@ -11,23 +11,26 @@ class ResultsViewController: UIViewController {
     
     var cycleData: CycleData?
     var currentCycle = K.Cycle.defaultCycle
+    var titleText: String?
 
     @IBOutlet weak var wakeImageView: UIImageView!
+    @IBOutlet weak var titleLabel: UILabel!
     @IBOutlet weak var timeLabel: UILabel!
     @IBOutlet weak var incrementButton: UIButton!
     @IBOutlet weak var decrementButton: UIButton!
     @IBOutlet weak var descriptionText: UILabel!
     
-    func updateUI() {
-        timeLabel.text = cycleData?.getTime(cycle: currentCycle)
-        descriptionText.text = cycleData?.getDescription(cycle: currentCycle)
-    }
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        wakeImageView.image = UIImage(systemName: K.Symbols.resultsControllerLogo)
+        titleLabel.text = titleText
+        wakeImageView.image = UIImage(systemName: K.Symbols.sun)
         updateUI()
+    }
+    
+    func updateUI() {
+        timeLabel.text = cycleData?.getTime(cycle: currentCycle)
+        descriptionText.text = cycleData?.getDescription(cycle: currentCycle)
     }
 
     @IBAction func incrementButtonPressed(_ sender: UIButton) {

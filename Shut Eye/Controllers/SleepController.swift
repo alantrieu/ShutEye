@@ -11,6 +11,7 @@ class SleepController: UIViewController {
     
     let formatter = DateFormatter()
     var timeString: String?
+    let cycleCalc = CycleCalculator()
     
     @IBOutlet weak var calculateButton: UIButton!
     @IBOutlet weak var logoView: UIImageView!
@@ -21,7 +22,7 @@ class SleepController: UIViewController {
         
         formatter.dateFormat = "hh:mm a"
         
-        logoView.image = UIImage(systemName: K.Symbols.sleepControllerLogo)
+        logoView.image = UIImage(systemName: K.Symbols.moon)
         timePicker.setValue(K.Colors.textColor, forKey: "textColor")
         timeString = formatter.string(from: timePicker.date)
     }
@@ -31,16 +32,16 @@ class SleepController: UIViewController {
     }
     
     @IBAction func calculatePressed(_ sender: UIButton) {
-        performSegue(withIdentifier: K.SegueIDs.results, sender: self)
+        performSegue(withIdentifier: K.Segues.results, sender: self)
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        if (segue.identifier == K.SegueIDs.results) {
-            let cycleCalc = CycleCalculator()
-            let cycleData = CycleData(cycleTimes: cycleCalc.calculateCycles(time: timePicker.date, with: formatter))
+        if (segue.identifier == K.Segues.results) {
+            let cycleData = CycleData(cycleTimes: cycleCalc.calculateCycles(time: timePicker.date, with: formatter, sleep: true))
             
             let destVC = segue.destination as! ResultsViewController
             destVC.cycleData = cycleData
+            destVC.titleText = K.Segues.sleepResults
         }
     }
 }
