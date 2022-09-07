@@ -8,12 +8,11 @@
 import Foundation
 
 struct CycleCalculator {
-    
     // given a certain time, computes the wake up times for 3, 4, 5 and 6 cycles of sleep as an array of Strings
     func calculateCycles(time: Date, with formatter: DateFormatter) -> [Int: String] {
         var cycleDict = [Int: String]()
-        for cycleNum in 3...6 {
-            let cycle = time.add(minutes: 90 * cycleNum)
+        for cycleNum in K.Cycle.cycleRange {
+            let cycle = time.add(minutes: K.Cycle.cycleMinutes * cycleNum)
             cycleDict[cycleNum] = formatter.string(from: cycle)
         }
         return cycleDict

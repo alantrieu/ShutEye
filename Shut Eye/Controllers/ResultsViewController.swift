@@ -10,7 +10,7 @@ import UIKit
 class ResultsViewController: UIViewController {
     
     var cycleData: CycleData?
-    var currentCycle = CycleData.getDefaultCycle()
+    var currentCycle = K.Cycle.defaultCycle
 
     @IBOutlet weak var wakeImageView: UIImageView!
     @IBOutlet weak var timeLabel: UILabel!
@@ -20,13 +20,13 @@ class ResultsViewController: UIViewController {
     
     func updateUI() {
         timeLabel.text = cycleData?.getTime(cycle: currentCycle)
-        descriptionText.text = "\(cycleData!.getHours(cycle: currentCycle)) hours of sleep, or \(currentCycle) complete cycles"
+        descriptionText.text = cycleData?.getDescription(cycle: currentCycle)
     }
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        wakeImageView.image = UIImage(systemName: "sun.and.horizon")
+        wakeImageView.image = UIImage(systemName: K.Symbols.resultsControllerLogo)
         updateUI()
     }
 

@@ -9,18 +9,14 @@ import Foundation
 
 struct CycleData {
     private let cycleTimes: [Int: String]
-    private var currentCycle: Int = 5
-    
-    static func getDefaultCycle() -> Int {
-        return 5
-    }
+    private var currentCycle: Int = K.Cycle.defaultCycle
     
     init(cycleTimes: [Int: String]) {
         self.cycleTimes = cycleTimes
     }
     
     func getHours(cycle: Int) -> String {
-        let hours = Double(90 * cycle) / Double(60)
+        let hours = Double(K.Cycle.cycleMinutes * cycle) / Double(K.Cycle.minutes)
         return (floor(hours) == hours) ? String(format: "%.0f", hours) : String(hours)
     }
     
@@ -31,17 +27,21 @@ struct CycleData {
         return retVal
     }
     
+    func getDescription(cycle: Int) -> String {
+        return "\(getHours(cycle: currentCycle)) hours of sleep, or \(currentCycle) complete cycles"
+    }
+    
     func getCurrentCycle() -> Int {
         return currentCycle
     }
     
     mutating func incrementCurrentCycle() -> Int {
-        currentCycle = (currentCycle == 6) ? 3 : currentCycle + 1
+        currentCycle = (currentCycle == K.Cycle.highestCycle) ? K.Cycle.lowestCycle : currentCycle + 1
         return currentCycle
     }
     
     mutating func decrementCurrentCycle() -> Int {
-        currentCycle = (currentCycle == 3) ? 6 : currentCycle - 1
+        currentCycle = (currentCycle == K.Cycle.lowestCycle) ? K.Cycle.highestCycle : currentCycle - 1
         return currentCycle
     }
 }

@@ -16,6 +16,7 @@
 		C256F29E28C5F7EC009B1FB7 /* ResultsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C256F29D28C5F7EC009B1FB7 /* ResultsViewController.swift */; };
 		C256F2A028C7300B009B1FB7 /* CycleCalculator.swift in Sources */ = {isa = PBXBuildFile; fileRef = C256F29F28C7300B009B1FB7 /* CycleCalculator.swift */; };
 		C256F2A428C7874D009B1FB7 /* CycleData.swift in Sources */ = {isa = PBXBuildFile; fileRef = C256F2A328C7874D009B1FB7 /* CycleData.swift */; };
+		C2852E9128C870CC00A2C25C /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2852E9028C870CC00A2C25C /* Constants.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -31,6 +32,7 @@
 		C256F29D28C5F7EC009B1FB7 /* ResultsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultsViewController.swift; sourceTree = "<group>"; };
 		C256F29F28C7300B009B1FB7 /* CycleCalculator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CycleCalculator.swift; sourceTree = "<group>"; };
 		C256F2A328C7874D009B1FB7 /* CycleData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CycleData.swift; sourceTree = "<group>"; };
+		C2852E9028C870CC00A2C25C /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -89,6 +91,7 @@
 			isa = PBXGroup;
 			children = (
 				C256F29F28C7300B009B1FB7 /* CycleCalculator.swift */,
+				C2852E9028C870CC00A2C25C /* Constants.swift */,
 				C256F2A328C7874D009B1FB7 /* CycleData.swift */,
 			);
 			path = Models;
@@ -173,6 +176,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C2852E9128C870CC00A2C25C /* Constants.swift in Sources */,
 				C211BE1628BA598E00EB92E6 /* SleepController.swift in Sources */,
 				C211BE1228BA598E00EB92E6 /* AppDelegate.swift in Sources */,
 				C256F2A428C7874D009B1FB7 /* CycleData.swift in Sources */,

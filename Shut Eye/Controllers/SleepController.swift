@@ -9,10 +9,6 @@ import UIKit
 
 class SleepController: UIViewController {
     
-    let hourArray = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12]
-    let minuteArray = [00, 05, 10, 15, 20, 25, 30, 35, 40, 45, 50, 55]
-    let periodArray = ["AM", "PM"]
-
     let formatter = DateFormatter()
     var timeString: String?
     
@@ -25,8 +21,8 @@ class SleepController: UIViewController {
         
         formatter.dateFormat = "hh:mm a"
         
-        logoView.image = UIImage(systemName: "moon.zzz")
-        timePicker.setValue(UIColor.white, forKey: "textColor")
+        logoView.image = UIImage(systemName: K.Symbols.sleepControllerLogo)
+        timePicker.setValue(K.Colors.textColor, forKey: "textColor")
         timeString = formatter.string(from: timePicker.date)
     }
     
@@ -35,11 +31,11 @@ class SleepController: UIViewController {
     }
     
     @IBAction func calculatePressed(_ sender: UIButton) {
-        performSegue(withIdentifier: "toResults", sender: self)
+        performSegue(withIdentifier: K.SegueIDs.results, sender: self)
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        if (segue.identifier == "toResults") {
+        if (segue.identifier == K.SegueIDs.results) {
             let cycleCalc = CycleCalculator()
             let cycleData = CycleData(cycleTimes: cycleCalc.calculateCycles(time: timePicker.date, with: formatter))
             
