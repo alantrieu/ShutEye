@@ -8,17 +8,21 @@
 import UIKit
 
 struct K {
+    static let appName = "Shut Eye"
+    
     struct Colors {
         static let textColor = UIColor.white
     }
     
     struct Symbols {
-        static let sleepControllerLogo = "moon.zzz"
-        static let resultsControllerLogo = "sun.and.horizon"
+        static let moon = "moon.zzz"
+        static let sun = "sun.and.horizon"
     }
     
-    struct SegueIDs {
+    struct Segues {
         static let results = "toResults"
+        static let sleepResults = "For a good night's sleep, try to wake up at..."
+        static let wakeResults = "For a goodnight's sleep, try to sleep at..."
     }
     
     struct Cycle {

@@ -8,7 +8,7 @@
 import Foundation
 
 struct CycleData {
-    private let cycleTimes: [Int: String]
+    private let cycleTimes: [Int: String] // dictionary of cycle numbers and their respective wake-up times
     private var currentCycle: Int = K.Cycle.defaultCycle
     
     init(cycleTimes: [Int: String]) {
