@@ -12,6 +12,7 @@ class ResultsViewController: UIViewController {
     var cycleData: CycleData?
     var currentCycle = K.Cycle.defaultCycle
     var titleText: String?
+    var isWake: Bool?
 
     @IBOutlet weak var wakeImageView: UIImageView!
     @IBOutlet weak var titleLabel: UILabel!
@@ -24,7 +25,7 @@ class ResultsViewController: UIViewController {
         super.viewDidLoad()
         
         titleLabel.text = titleText
-        wakeImageView.image = UIImage(systemName: K.Symbols.sun)
+        wakeImageView.image = (isWake == true) ? UIImage(systemName: K.Symbols.moon) : UIImage(systemName: K.Symbols.sun)
         updateUI()
     }
     

@@ -41,6 +41,7 @@ class WakeController: UIViewController {
             let destVC = segue.destination as! ResultsViewController
             destVC.cycleData = cycleData
             destVC.titleText = K.Segues.wakeResults
+            destVC.isWake = true
         }
     }
 }

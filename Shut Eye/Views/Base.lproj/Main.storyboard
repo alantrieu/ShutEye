@@ -210,7 +210,7 @@
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Jtz-SP-RFC">
-                                                <rect key="frame" x="335" y="13" width="47.5" height="61"/>
+                                                <rect key="frame" x="334.5" y="13" width="46.5" height="61"/>
                                                 <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <state key="normal" title="Button"/>
                                                 <buttonConfiguration key="configuration" style="tinted" title="+">
@@ -221,7 +221,7 @@
                                                 </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bmN-c5-pZa">
-                                                <rect key="frame" x="31.5" y="13" width="47.5" height="61"/>
+                                                <rect key="frame" x="33" y="13" width="47.5" height="61"/>
                                                 <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <state key="normal" title="Button"/>
                                                 <buttonConfiguration key="configuration" style="tinted" title="−" titleAlignment="center">
@@ -233,15 +233,13 @@
                                             </button>
                                         </subviews>
                                         <constraints>
-                                            <constraint firstItem="c4j-CG-s0O" firstAttribute="baseline" secondItem="Jtz-SP-RFC" secondAttribute="baseline" id="5wW-cs-i2W"/>
                                             <constraint firstItem="bmN-c5-pZa" firstAttribute="centerY" secondItem="BCC-oY-Rum" secondAttribute="centerY" id="DyZ-gu-9fS"/>
-                                            <constraint firstAttribute="trailing" secondItem="Jtz-SP-RFC" secondAttribute="trailing" constant="31.5" id="GAc-wN-tAx"/>
-                                            <constraint firstItem="bmN-c5-pZa" firstAttribute="leading" secondItem="BCC-oY-Rum" secondAttribute="leading" constant="31.5" id="IXq-zv-a54"/>
-                                            <constraint firstAttribute="trailing" secondItem="Jtz-SP-RFC" secondAttribute="trailing" constant="31.5" id="ZUV-uh-luV"/>
+                                            <constraint firstAttribute="trailing" secondItem="Jtz-SP-RFC" secondAttribute="trailing" constant="33" id="GAc-wN-tAx"/>
+                                            <constraint firstItem="bmN-c5-pZa" firstAttribute="leading" secondItem="BCC-oY-Rum" secondAttribute="leading" constant="33" id="IXq-zv-a54"/>
+                                            <constraint firstItem="c4j-CG-s0O" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="bmN-c5-pZa" secondAttribute="trailing" id="NkG-lo-Xs3"/>
+                                            <constraint firstItem="Jtz-SP-RFC" firstAttribute="centerY" secondItem="BCC-oY-Rum" secondAttribute="centerY" id="USu-95-uy8"/>
                                             <constraint firstItem="c4j-CG-s0O" firstAttribute="centerY" secondItem="BCC-oY-Rum" secondAttribute="centerY" id="a5K-MN-jrf"/>
-                                            <constraint firstItem="c4j-CG-s0O" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="bmN-c5-pZa" secondAttribute="trailing" constant="8" symbolic="YES" id="gzP-Qr-zB9"/>
-                                            <constraint firstItem="Jtz-SP-RFC" firstAttribute="leading" secondItem="c4j-CG-s0O" secondAttribute="trailing" constant="33.5" id="i7a-Az-4VK"/>
-                                            <constraint firstItem="Jtz-SP-RFC" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="c4j-CG-s0O" secondAttribute="trailing" constant="8" symbolic="YES" id="mib-S3-Q1j"/>
+                                            <constraint firstItem="Jtz-SP-RFC" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="c4j-CG-s0O" secondAttribute="trailing" id="i7a-Az-4VK"/>
                                             <constraint firstItem="c4j-CG-s0O" firstAttribute="top" secondItem="BCC-oY-Rum" secondAttribute="top" constant="20" id="ofr-jl-7GQ"/>
                                             <constraint firstItem="c4j-CG-s0O" firstAttribute="centerX" secondItem="BCC-oY-Rum" secondAttribute="centerX" id="rHs-Gt-eTh"/>
                                         </constraints>

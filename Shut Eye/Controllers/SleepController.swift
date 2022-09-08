@@ -42,6 +42,7 @@ class SleepController: UIViewController {
             let destVC = segue.destination as! ResultsViewController
             destVC.cycleData = cycleData
             destVC.titleText = K.Segues.sleepResults
+            destVC.isWake = false
         }
     }
 }
