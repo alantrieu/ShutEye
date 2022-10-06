@@ -12,9 +12,7 @@ Heavily based on [Sleepopolis' sleep calculators](https://sleepopolis.com/calcul
 <img src="./readme-assets/home-screen.png" height="370px">
 
 ## Sleep Time Calculator
-<img style="display: inline" src="./readme-assets/sleep-1.png" height="370px">
-<img style="display: inline" src="./readme-assets/sleep-2.png" height="370px">
-<img style="display: inline" src="./readme-assets/sleep-3.png" height="370px">
+<img style="display: inline" src="./readme-assets/sleep-1.png" height="370px"><img style="display: inline" src="./readme-assets/sleep-2.png" height="370px"><img style="display: inline" src="./readme-assets/sleep-3.png" height="370px">
 
 ## Wake Up Time Calculator
 <img style="display: inline" src="./readme-assets/wake-1.png" height="370px"><img style="display: inline" src="./readme-assets/wake-2.png" height="370px"><img style="display: inline" src="./readme-assets/wake-3.png" height="370px">
