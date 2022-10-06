@@ -19,6 +19,11 @@ struct K {
         static let sun = "sun.and.horizon"
     }
     
+    struct Buttons {
+        static let increment = "+"
+        static let decrement = "−"
+    }
+    
     struct Segues {
         static let results = "toResults"
         static let sleepResults = "For a good night's sleep, try to wake up at..."

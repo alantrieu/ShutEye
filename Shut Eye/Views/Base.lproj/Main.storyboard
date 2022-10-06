@@ -217,7 +217,7 @@
                                                     <fontDescription key="titleFontDescription" name="Futura-Medium" family="Futura" pointSize="36"/>
                                                 </buttonConfiguration>
                                                 <connections>
-                                                    <action selector="incrementButtonPressed:" destination="xp8-Ne-Dtk" eventType="touchUpInside" id="N77-pD-BPd"/>
+                                                    <action selector="changeCycle:" destination="xp8-Ne-Dtk" eventType="touchUpInside" id="T8M-hv-7Fa"/>
                                                 </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bmN-c5-pZa">
@@ -228,7 +228,7 @@
                                                     <fontDescription key="titleFontDescription" name="Futura-Medium" family="Futura" pointSize="36"/>
                                                 </buttonConfiguration>
                                                 <connections>
-                                                    <action selector="decrementButtonPressed:" destination="xp8-Ne-Dtk" eventType="touchUpInside" id="cmf-oK-8ti"/>
+                                                    <action selector="changeCycle:" destination="xp8-Ne-Dtk" eventType="touchUpInside" id="dvh-ai-d8q"/>
                                                 </connections>
                                             </button>
                                         </subviews>

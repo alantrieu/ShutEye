@@ -14,6 +14,7 @@
 		C211BE1928BA598E00EB92E6 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C211BE1728BA598E00EB92E6 /* Main.storyboard */; };
 		C211BE1B28BA598F00EB92E6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C211BE1A28BA598F00EB92E6 /* Assets.xcassets */; };
 		C211BE1E28BA598F00EB92E6 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C211BE1C28BA598F00EB92E6 /* LaunchScreen.storyboard */; };
+		C240195928EF0417005DCD08 /* readme-assets in Resources */ = {isa = PBXBuildFile; fileRef = C240195828EF0417005DCD08 /* readme-assets */; };
 		C256F29E28C5F7EC009B1FB7 /* ResultsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C256F29D28C5F7EC009B1FB7 /* ResultsViewController.swift */; };
 		C256F2A028C7300B009B1FB7 /* CycleCalculator.swift in Sources */ = {isa = PBXBuildFile; fileRef = C256F29F28C7300B009B1FB7 /* CycleCalculator.swift */; };
 		C256F2A428C7874D009B1FB7 /* CycleData.swift in Sources */ = {isa = PBXBuildFile; fileRef = C256F2A328C7874D009B1FB7 /* CycleData.swift */; };
@@ -31,6 +32,7 @@
 		C211BE1A28BA598F00EB92E6 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		C211BE1D28BA598F00EB92E6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		C211BE1F28BA598F00EB92E6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		C240195828EF0417005DCD08 /* readme-assets */ = {isa = PBXFileReference; lastKnownFileType = folder; path = "readme-assets"; sourceTree = "<group>"; };
 		C256F29B28C5D368009B1FB7 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		C256F29D28C5F7EC009B1FB7 /* ResultsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultsViewController.swift; sourceTree = "<group>"; };
 		C256F29F28C7300B009B1FB7 /* CycleCalculator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CycleCalculator.swift; sourceTree = "<group>"; };
@@ -53,6 +55,7 @@
 		C211BE0528BA598E00EB92E6 = {
 			isa = PBXGroup;
 			children = (
+				C256F29B28C5D368009B1FB7 /* README.md */,
 				C211BE1028BA598E00EB92E6 /* Shut Eye */,
 				C211BE0F28BA598E00EB92E6 /* Products */,
 			);
@@ -74,10 +77,10 @@
 				C256F2A128C751E6009B1FB7 /* Models */,
 				C256F2A228C751EF009B1FB7 /* Views */,
 				C256F29C28C5F7DB009B1FB7 /* Controllers */,
-				C256F29B28C5D368009B1FB7 /* README.md */,
 				C211BE1A28BA598F00EB92E6 /* Assets.xcassets */,
 				C211BE1C28BA598F00EB92E6 /* LaunchScreen.storyboard */,
 				C211BE1F28BA598F00EB92E6 /* Info.plist */,
+				C240195828EF0417005DCD08 /* readme-assets */,
 			);
 			path = "Shut Eye";
 			sourceTree = "<group>";
@@ -172,6 +175,7 @@
 				C211BE1E28BA598F00EB92E6 /* LaunchScreen.storyboard in Resources */,
 				C211BE1B28BA598F00EB92E6 /* Assets.xcassets in Resources */,
 				C211BE1928BA598E00EB92E6 /* Main.storyboard in Resources */,
+				C240195928EF0417005DCD08 /* readme-assets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

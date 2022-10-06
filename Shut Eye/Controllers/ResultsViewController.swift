@@ -33,15 +33,16 @@ class ResultsViewController: UIViewController {
         timeLabel.text = cycleData?.getTime(cycle: currentCycle)
         descriptionText.text = cycleData?.getDescription(cycle: currentCycle)
     }
-
-    @IBAction func incrementButtonPressed(_ sender: UIButton) {
-        currentCycle = cycleData!.incrementCurrentCycle()
-        updateUI()
-    }
     
-    @IBAction func decrementButtonPressed(_ sender: UIButton) {
-        currentCycle = cycleData!.decrementCurrentCycle()
-        updateUI()
+    @IBAction func changeCycle(_ sender: UIButton) {
+        if let btnText = sender.titleLabel!.text {
+            if (btnText == K.Buttons.increment) {
+                currentCycle = (isWake == true) ? cycleData!.decrementCurrentCycle() : cycleData!.incrementCurrentCycle()
+            } else if (btnText == K.Buttons.decrement) {
+                currentCycle = (isWake == true) ? cycleData!.incrementCurrentCycle() : cycleData!.decrementCurrentCycle()
+            }
+            updateUI()
+        }
     }
     
     @IBAction func recalculatePressed(_ sender: UIButton) {
